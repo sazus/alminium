@@ -279,6 +279,8 @@ then
 fi
 
 cp     redmine/Gemfile.local   $INSTALL_DIR/
+mv     $INSTALL_DIR/Gemfile    $INSTALL_DIR/Gemfile.org
+cp     redmine/Gemfile_redmine_v2.5.2 $INSTALL_DIR/Gemfile
 $CPCMD redmine/config/*        $INSTALL_DIR/config/
 $CPCMD redmine/public/themes/* $INSTALL_DIR/public/themes/
 
